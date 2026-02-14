@@ -1,0 +1,104 @@
+body {
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    color: white;
+}
+
+main {
+    display: block;
+}
+.serce {
+    position: relative;
+    width: 300px; /* control the size */
+    aspect-ratio: 1;
+    background-color: red;
+    filter: drop-shadow(0px 0px 10px white);
+    clip-path: 
+    shape(
+      from 50% 91%,
+      line to 90% 50%,
+      arc to 50% 9%  of 1%,
+      arc to 10% 50% of 1%
+    );
+    transition: all 0.5s;
+}
+
+.jeden, .dwa, .trzy, .cztery, .piec {
+    transition: all 0.7s;
+}
+
+.jeden {
+    height: 20%;
+    width: 100%;
+    background-color: #D52D00;
+    filter: drop-shadow(0px 0px 10px #D52D00);
+}
+
+.dwa {
+    height: 20%;
+    width: 100%;
+    background-color: #EF7627;
+    filter: drop-shadow(0px 0px 10px #EF7627);
+}
+
+.trzy {
+    height: 20%;
+    width: 100%;
+    background-color: white;
+    filter: drop-shadow(0px 0px 10px white);
+}
+
+.cztery {
+    height: 20%;
+    width: 100%;
+    background-color: #D162A4;
+    filter: drop-shadow(0px 0px 10px #D162A4);
+}
+
+.piec {
+    height: 20%;
+    width: 100%;
+    background-color: #A30262;
+    filter: drop-shadow(0px 0px 10px #A30262);
+}
+
+.serce2 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 300px; /* control the size */
+    aspect-ratio: 1;
+    background-color: black;
+    /* clip-path: 
+    shape(
+      from 50% 91%,
+      line to 90% 50%,
+      arc to 50% 9%  of 1%,
+      arc to 10% 50% of 1%
+    ); */
+    animation: animacja 1s ease-in forwards;
+}
+
+@keyframes animacja {
+    from {
+        height: 300px;
+    }
+    to {
+        height: 0px;
+    }
+}
+
+@keyframes tekst {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+h1, form, p {
+    opacity: 0;
+    animation: tekst 0.5s 1.5s forwards;
+}

@@ -6,14 +6,18 @@ body {
 }
 
 main {
-    display: block;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 .serce {
     position: relative;
     width: 300px; /* control the size */
     aspect-ratio: 1;
     background-color: red;
-    filter: drop-shadow(0px 0px 10px white);
+    /*filter: drop-shadow(0px 0px 100px white);
+    box-shadow: 0px 0px 200px white;*/
     clip-path: 
     shape(
       from 50% 91%,
@@ -22,6 +26,25 @@ main {
       arc to 10% 50% of 1%
     );
     transition: all 0.5s;
+    animation: bicie 1.5s infinite;
+    border: solid 1px white;
+}
+
+.serce_v2 {
+    position: relative;
+    width: 50px; /* control the size */
+    aspect-ratio: 1;
+    background-color: red;
+    /*filter: drop-shadow(0px 0px 100px white);
+    box-shadow: 0px 0px 200px white;*/
+    clip-path: 
+    shape(
+      from 50% 91%,
+      line to 90% 50%,
+      arc to 50% 9%  of 1%,
+      arc to 10% 50% of 1%
+    );
+    
 }
 
 .jeden, .dwa, .trzy, .cztery, .piec {
@@ -63,6 +86,27 @@ main {
     filter: drop-shadow(0px 0px 10px #A30262);
 }
 
+.szesc {
+    height: 40%;
+    width: 100%;
+    background-color: #D60270;
+    filter: drop-shadow(0px 0px 10px #D60270);
+}
+
+.siedem {
+    height: 20%;
+    width: 100%;
+    background-color: #9B4F96;
+    filter: drop-shadow(0px 0px 10px #9B4F96);
+}
+
+.osiem {
+    height: 40%;
+    width: 100%;
+    background-color: #0038A8;
+    filter: drop-shadow(0px 0px 10px #0038A8);
+}
+
 .serce2 {
     position: absolute;
     top: 0;
@@ -98,7 +142,41 @@ main {
     }
 }
 
-h1, form, p {
+h1, form, p, h2, .song {
     opacity: 0;
     animation: tekst 0.5s 1.5s forwards;
+}
+
+h1, p, h2 {
+  text-shadow: 2px 2px 10px white;
+}
+
+input {
+  background-color: black;
+  border: none;
+}
+
+@keyframes bicie {
+  10% {
+    scale: 1;
+  }
+  20% {
+    scale: 1.1;
+  }
+  30% {
+    scale: 0.9;
+  }
+  40% {
+    scale: 1.1;
+  }
+  50% {
+    scale: 1;
+  }
+}
+
+.song {
+    width: 95%;
+    background-image: linear-gradient(to left, #990012, #890010);
+    box-shadow: 0px 0px 20px red;
+    text-align: center;
 }
